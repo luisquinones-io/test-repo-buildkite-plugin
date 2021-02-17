@@ -1,10 +1,12 @@
 #!/bin/bash
 set -euo pipefail
 
-PATTERN="$BUILDKITE_PLUGIN_TEST_REPO_PATTERN"
+PATTERN="$BUILDKITE_PLUGIN_TEST_REPO_GIT_PATTERN"
 
-echo "--- :spell checking"
+echo "--- :1234: Counting the number of files"
 
-docker run --rm -ti -v $(pwd):/workdir tmaier/markdown-spellcheck:latest --report "$PATTERN"
+COUNT=$(find . -name "$PATTERN" | wc -l)
 
-buildkite-agent annotate "$PATTERN"
+echo "Found ${COUNT} files matching ${PATTERN}"
+
+buildkite-agent annotate "Found ${COUNT} files matching ${PATTERN}"
