@@ -1,9 +1,5 @@
 services:
-  spellcheck:
-    image: tmaier/markdown-spellcheck:latest
-  #  command: ['--id', 'luisquinones-io/repo-test']
-    volumes:
-      - ".:/workdir"
+tests:
   lint:
     image: buildkite/plugin-linter
     command: ['--id', 'luisquinones-io/repo-test']
