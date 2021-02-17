@@ -1,7 +1,12 @@
 services:
   tests: ...
-  spellcheck:
-    image: tmaier/markdown-spellcheck:latest
-    command: [docker run --rm -ti -v $(pwd):/workdir tmaier/markdown-spellcheck:latest --report "**/*.md"]
-    volumes:
-      - ".:/workdir"
+    spellcheck:
+      image: tmaier/markdown-spellcheck:latest
+      command: [docker run --rm -ti -v $(pwd):/workdir tmaier/markdown-spellcheck:latest --report "**/*.md"]
+      volumes:
+        - ".:/workdir"
+    lint:
+      image: buildkite/plugin-linter
+      command: ['--id', 'luisquinones-io/repo-test']
+      volumes:
+        - ".:/plugin:ro"
