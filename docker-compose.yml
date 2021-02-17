@@ -1,7 +1,7 @@
 services:
-tests:
+  tests: ...
   lint:
     image: buildkite/plugin-linter
-    command: ['--id', 'luisquinones-io/repo-test']
+    command: ['--id', 'luisquinones-io/test-repo']
     volumes:
       - ".:/plugin:ro"
