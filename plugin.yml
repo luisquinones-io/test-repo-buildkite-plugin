@@ -1,0 +1,9 @@
+name: Spell checker
+description: Spell checks build
+author: https://github.com/luisquinones-io
+requirements:
+configuration:
+  properties:
+    pattern:
+      type: string
+  additionalProperties: false
