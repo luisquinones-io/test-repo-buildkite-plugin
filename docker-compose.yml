@@ -1,7 +1,7 @@
 services:
   spellcheck:
     image: tmaier/markdown-spellcheck:latest
-    command: ['--id', 'luisquinones-io/repo-test']
+  #  command: ['--id', 'luisquinones-io/repo-test']
     volumes:
       - ".:/workdir"
   lint:
