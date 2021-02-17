@@ -1,6 +1,0 @@
-steps:
-- command: ls
-  plugins:
-    plugins:
-      test-repo
-      pattern: ‘*.md’
