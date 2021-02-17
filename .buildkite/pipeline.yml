@@ -3,5 +3,4 @@ steps:
   plugins:
     plugins:
       test-repo
-        files: hooks/*
       pattern: ‘*.md’
