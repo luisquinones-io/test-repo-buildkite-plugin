@@ -1,4 +1,4 @@
-name: Spell checker
+name: spellchecker
 description: Spell checks build
 author: https://github.com/luisquinones-io
 requirements:
