@@ -1,6 +1,7 @@
 services:
   tests: ...
-  lint:
+  spellcheck:
     image: tmaier/markdown-spellcheck:latest
+    command: [docker run --rm -ti -v $(pwd):/workdir tmaier/markdown-spellcheck:latest --report "**/*.md"]
     volumes:
       - ".:/workdir"
