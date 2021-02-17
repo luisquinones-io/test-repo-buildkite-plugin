@@ -1,7 +1,7 @@
-name: spellchecker
-description: Spell checks build
+name: spellcheck
+description: Runs spell checker
 author: https://github.com/luisquinones-io
-requirements:
+requirements: []
 configuration:
   properties:
     pattern:
