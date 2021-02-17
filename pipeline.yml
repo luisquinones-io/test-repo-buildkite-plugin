@@ -1,5 +1,0 @@
-steps:
-- command: ls
-plugins:
-- buildkite/test-repo-buildkite-plugin#1.0.0:
-pattern: ‘*.md’
