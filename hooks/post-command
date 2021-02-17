@@ -1,0 +1,10 @@
+#!/bin/bash
+set -euo pipefail
+
+PATTERN="$BUILDKITE_PLUGIN_TEST_REPO_PATTERN"
+
+echo "--- :spell checking"
+
+docker run --rm -ti -v $(pwd):/workdir tmaier/markdown-spellcheck:latest --report "$PATTERN"
+
+buildkite-agent annotate "$PATTERN"

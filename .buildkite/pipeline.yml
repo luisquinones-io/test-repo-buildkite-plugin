@@ -1,7 +1,7 @@
 steps:
 - command: ls
-- command: docker-compose run --rm lint
-#- command: docker-compose run --rm spellcheck
-plugins:
-- luisquinones-io/test-repo-buildkite-plugin#v1.0.0:
-pattern: ‘*.md’
+  plugins:
+    plugins:
+      test-repo
+        files: hooks/*
+      pattern: ‘*.md’

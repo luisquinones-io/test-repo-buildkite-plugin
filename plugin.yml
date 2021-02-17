@@ -1,9 +1,11 @@
-name: spellcheck
+name: test-repo
 description: Runs spell checker
 author: https://github.com/luisquinones-io
 requirements: []
 configuration:
   properties:
-    pattern:
+    readme:
+      type: string
+    pattern: 
       type: string
   additionalProperties: false
