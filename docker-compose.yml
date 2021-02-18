@@ -11,6 +11,5 @@ services:
         - ".:/plugin:ro"
   md:
     image: tmaier/markdown-spellcheck:latest
-    command: ['--report', '*/*.md']
     volumes:
       - .:/workdir
