@@ -9,3 +9,8 @@ services:
     command: ['--id', 'luisquinones-io/test-repo']
     volumes:
         - ".:/plugin:ro"
+  md:
+    image: tmaier/markdown-spellcheck:latest
+    command: ['--report', '*/*.md']
+    volumes:
+      - .:/workdir

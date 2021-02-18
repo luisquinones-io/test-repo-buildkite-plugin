@@ -4,8 +4,6 @@ author: https://github.com/luisquinones-io
 requirements: []
 configuration:
   properties:
-    readme:
-      type: string
-    pattern: 
+    pattern:
       type: string
   additionalProperties: false

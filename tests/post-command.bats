@@ -6,7 +6,7 @@ load '/usr/local/lib/bats/load.bash'
 # export BUILDKITE_AGENT_STUB_DEBUG=/dev/tty
 
 @test "Creates an annotation with error count" {
-  export BUILDKITE_PLUGIN_TEST_REPO_GIT_PATTERN="*.bats"
+  export BUILDKITE_PLUGIN_TEST_REPO_PATTERN="*.bats"
 
   stub buildkite-agent 'annotate "Found 1 files matching *.bats" : echo Annotation created'
 
